@@ -40,8 +40,9 @@ Page({
   getCartList: function () {
     let that = this;
     util.request(api.CartList).then(function (res) {
+      console.info(res.data);
       if (res.errno === 0) {
-        console.log(res.data);
+      
         that.setData({
           cartGoods: res.data.cartList,
           cartTotal: res.data.cartTotal

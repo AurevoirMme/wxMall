@@ -66,6 +66,7 @@ Page({
   },
   switchCate: function (event) {
     var that = this;
+    console.info(this.data);
     var currentTarget = event.currentTarget;
     if (this.data.currentCategory.id == event.currentTarget.dataset.id) {
       return false;

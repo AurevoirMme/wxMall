@@ -9,7 +9,7 @@ Page({
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
-    console.log(app.globalData)
+   // console.log(app.globalData)
   },
   onReady: function () {
 
@@ -39,13 +39,15 @@ Page({
   },
   goLogin(){
     user.loginByWeixin().then(res => {
+      console.log('成功' + res);
+      
       this.setData({
         userInfo: res.data.userInfo
       });
       app.globalData.userInfo = res.data.userInfo;
       app.globalData.token = res.data.token;
     }).catch((err) => {
-      console.log(err)
+      console.log('错误'+err);
     });
   },
   exitLogin: function () {

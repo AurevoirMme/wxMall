@@ -267,6 +267,7 @@ Page({
   },
   addToCart: function () {
     var that = this;
+    console.info(this.data)
     if (this.data.openAttr == false) {
       //打开规格选择窗口
       this.setData({
